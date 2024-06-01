@@ -20,7 +20,7 @@ export function Clean(app: Hono, cacheDuration: number = 1440) {
 
     const data = validateURL(urlDecoded);
 
-    return c.json(data, 200, {
+    return c.json({ valid: data }, 200, {
       'Cache-Control': `public, max-age=${cacheDuration}`,
     });
   });
