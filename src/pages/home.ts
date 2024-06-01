@@ -5,28 +5,14 @@ export function Home(app: Hono, cacheDuration: number = 1440) {
     const response = {
       routes: [
         {
-          name: 'portfolios',
-          description: 'Get all information about a specific portfolio.',
-          path: '/portfolios/:portfolio_slug',
-          children: [
-            {
-              name: 'images',
-              description: 'Get the image for your portfolio.',
-              path: '/portfolios/:portfolio_slug/favicon',
-            },
-          ],
+          name: 'clean',
+          description: 'Cleans provided URL.',
+          path: '/clean/:url',
         },
         {
-          name: 'projects',
-          description: 'Get all information about a specific project.',
-          path: '/portfolios/:portfolio_slug/projects/:project_slug',
-          children: [
-            {
-              name: 'images',
-              description: 'Get all images for a specific project.',
-              path: '/portfolios/:portfolio_slug/projects/:project_slug/images/:image_id',
-            },
-          ],
+          name: 'validate',
+          description: 'Validates the provided URL.',
+          path: '/validate/:url',
         },
       ],
     };
