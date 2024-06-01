@@ -1,4 +1,7 @@
-# projects
+# Tidy-Url-Api
+
+This is just a wrapper for the tidy-url package.
+https://github.com/DrKain/tidy-url
 
 ## 🧰 Usage
 
